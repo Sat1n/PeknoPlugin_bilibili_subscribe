@@ -1,0 +1,34 @@
+{
+  "id": "bilibili_subscribe",
+  "name": "Bilibili Subscribe",
+  "source_type": "bilibili_video",
+  "description": "Sync latest videos from the Bilibili accounts you follow via RSSHub.",
+  "version": "0.1.0",
+  "required_credentials": ["bilibili"],
+  "auto_sync_supported": true,
+  "framework_defaults": {
+    "retention_hours": 24,
+    "auto_short_summary": false,
+    "auto_sync": true,
+    "auto_sync_interval": 5,
+    "sync_limit": 50
+  },
+  "settings_schema": {
+    "uid": {
+      "type": "string",
+      "label": "Bilibili UID",
+      "default": "",
+      "required": true,
+      "scope": "user",
+      "description": "The Bilibili user ID used by the RSSHub followings video route."
+    },
+    "rsshub_base_url": {
+      "type": "string",
+      "label": "RSSHub 地址",
+      "default": "http://127.0.0.1:1200",
+      "required": true,
+      "scope": "user",
+      "description": "RSSHub base URL, for example http://127.0.0.1:1200."
+    }
+  }
+}
